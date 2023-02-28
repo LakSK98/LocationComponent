@@ -1,0 +1,108 @@
+// COLOURS OF NEW DARK TEAL THEME START
+
+$cc-primary-color: #005151;
+$teal: #30CEBB;
+$cc-secondary-green: #003434;
+$cc-green-shade-2: #035a5a;
+$cc-green-shade-1: #026565;
+$cc-secondary-light-green: #669696;
+$cc-green-shade-light-2: #cde6e6;
+$cc-green-shade-light-1: #E4F2F2;
+$cc-primary-grey: #4d6363;
+$grey: #808080;
+$disabled-grey: #9b9b9b;
+$accent-light-grey: #dddddd;
+$list-lightgrey: #eeeeee;
+$light-grey: #ced4da;
+$lightest-grey: #f7f7f7;
+$blue-grey: #e9ecef;
+$white: #ffffff;
+$black: #000000;
+$cc-secondary-yellow: #F7B65C;
+$cc-error: #C23934;
+$cc-success: #37B400;
+$cc-primary-background-color: #fbfcfe;
+
+// COLOURS OF NEW DARK TEAL THEME END
+
+// COLOURS OF OLD BLUE THEME START
+
+// $cc-primary-color: #30357c;
+// $cc-primary-light-blue: #0496f8;
+// $cc-primary-orange: #ec5132;
+// $cc-primary-grey: #4d4f5c;
+// $cc-primary-background-color: #fbfcfe;
+// $cc-primary-green: #51dcce;
+// $cc-primary-light-green: #dcfaf8;
+// $cc-secondary-green: #003434;
+// $cc-secondary-blue: #3e6087;
+// $cc-secondary-yellow: #ffc06a;
+// $cc-accent-dark-blue: darken($cc-primary-color, 10%);
+// $cc-icon-picker-color: #495057;
+// $cc-drag-and-drop-grid-background: #e7edff;
+// $cc-link-button-color: #007bff;
+// $cc-link-button-hover-color: #0056b3;
+// $accent-light-grey: #ddd;
+// $disabled-grey: #9b9b9b;
+// $list-lightgrey: #eee;
+// $white: #fff;
+// $black: #000;
+// $error: #db4240;
+// $grey: #808080;
+// $purple: #646cde;
+// $teal: #72E2D7;
+// $light-grey: #ced4da;
+
+// $ckeditor-background: #f9f9f9;
+// $ckeditor-border: lightgrey;
+// $ckeditor-chip-background: #e5e9ff;
+// $ckeditor-chip-color: #4d4094;
+
+// COLOURS OF OLD BLUE THEME END
+
+// Fonts
+$font-family: poppins,  'Open Sans', roboto, sans-serif;
+$font-size-general: 1em;
+$font-size-paragraph: $font-size-general;
+$font-size-h5: 1.063em;
+$font-size-h4: 1.125em;
+$font-size-h3: 1.15em;
+$font-size-h2: 1.375em;
+$font-size-h1: 1.5em;
+
+// Dimensions
+$sidebar-menu-width: 280px;
+
+// Breakpoints for Media Queries
+
+// Small smartphones (xs)
+$screen-xs-max: 479px;
+$screen-xs-min: 240px;
+
+// Small tablets and large smartphones - landscape view (sm)
+$screen-sm-max: 767px;
+$screen-sm-min: 480px;
+
+// Small tablets - portrait view (md)
+$screen-md-max: 991px;
+$screen-md-min: 768px;
+
+// Tablets and small desktops (lg)
+$screen-lg-max: 1199px;
+$screen-lg-min: 992px;
+
+// Large tablets and desktops (xl)
+$screen-xl-max: 1365px;
+$screen-xl-min: 1200px;
+
+// Medium Large tablets and desktops (ml)
+$screen-ml-max: 1600px;
+$screen-ml-min: 1366px;
+
+// Large tablets and desktops (xxl)
+$screen-xxl-max: 1919px;
+$screen-xxl-min: 1366px;
+
+// Extra large screens (xxxl)
+$screen-xxxl-max: 2048px;
+$screen-xxxl-min: 1920px;

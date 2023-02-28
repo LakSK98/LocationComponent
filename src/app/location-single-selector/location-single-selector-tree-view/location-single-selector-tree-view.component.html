@@ -1,0 +1,11 @@
+<kendo-treeview [nodes]="locations" textField="locationName" childrenField="items" 
+[(expandedKeys)]="expandedKeys" expandBy="locationId" 
+[filterable]="true"      
+  filterInputPlaceholder="Search" kendoTreeViewExpandable   
+      kendoTreeViewHierarchyBinding>
+      <ng-template kendoTreeViewNodeTemplate let-dataItem >
+       <span   class="selectoritem" (click)="showClick(dataItem)"  [ngClass]="{'disableNode': dataItem.isSelectable === false,'itemactive' : selectedLocationId == dataItem.locationId}">        
+        {{ dataItem.locationName }}  
+       </span>   
+      </ng-template>
+</kendo-treeview>

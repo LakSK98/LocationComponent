@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+// CC fonts
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700,900&display=swap');
+
+// Bootstrap imports
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// CC styles
+
+@import '../src/assets/styles/common';
+
+// FontAwesome imports
+
+@import url('https://use.fontawesome.com/releases/v5.13.0/css/all.css');
+
+// Kendo Theme imports
+
+@import '../node_modules/@progress/kendo-theme-default/dist/all.css';
+
+.k-input-prefix,  .k-input-suffix{
+    width: 25px;
+}

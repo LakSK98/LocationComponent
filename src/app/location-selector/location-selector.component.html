@@ -1,0 +1,13 @@
+<app-location-single-selector *ngIf="type == 'single'" labelText="{{labelText}}" class="location-selector-view" [locationHierachy]="locationHierachy"
+isDisableParentClick="false" selectedLocationId="{{selectedLocationId}}" hoverText="{{hoverText}}"
+selectedLocationName="{{selectedLocationName}}" isIncludeFloatLocation="true"
+(onLocationsData)="onLocationsFetched($event)" [selectorDisabled]="selectorDisabledLocation" [hideBranchLess]="true"
+(onChange)="updateLocationState($event)">
+</app-location-single-selector>
+
+<app-location-multi-selector *ngIf="type == 'multi'" labelText="{{labelText}}" class="location-selector-view" [locationHierachy]="locationHierachy"
+isDisableParentClick="false" selectedLocationId="{{selectedLocationId}}" hoverText="{{hoverText}}"
+selectedLocationName="{{selectedLocationName}}" isIncludeFloatLocation="true"
+(onLocationsData)="onLocationsFetched($event)" [selectorDisabled]="selectorDisabledLocation" [hideBranchLess]="true"
+(onChange)="updateLocationState($event)">
+</app-location-multi-selector>

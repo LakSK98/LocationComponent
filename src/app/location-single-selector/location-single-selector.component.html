@@ -1,0 +1,17 @@
+<div class="row align-items-center" (click)="closeDropDown()">
+  <div class="col-md-12">
+    <label *ngIf="labelText?.length > 0">{{labelText}}</label>
+
+    <div #menu class="d-flex justify-content-between location-selector-form"
+      [ngClass]="{'disableSelector':selectorDisabled,'location-selector-focus' : selectorOpened}" id="ddlLocationy"
+      (click)="locationClick()" (click)="$event.stopPropagation()" [title]="hoverText">
+      <div class="selected-location">{{selectedLocationName}}</div>
+      <div><em class="fas fa-chevron-down"></em></div>
+    </div>
+    <div class="location-tree-wrapper p-2" *ngIf="selectorOpened" (click)="$event.stopPropagation()">
+      <location-single-selector-tree-view [locations]="locationHierachy.locations" [expandedKeys]="expandedKeys"
+        [selectedLocationId]="selectedLocationId" (closeEvent)="onItemSelected($event)">
+      </location-single-selector-tree-view>
+    </div>
+  </div>
+</div>

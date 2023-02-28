@@ -1,0 +1,35 @@
+<div class="row align-items-center" (click)="closeDropDown()">
+  <div class="col-md-12">
+    <label *ngIf="labelText?.length > 0">{{labelText}}</label>
+
+    <div #menu class="d-flex justify-content-between location-selector-form"
+      [ngClass]="{'disableSelector':selectorDisabled,'location-selector-focus' : selectorOpened}" id="ddlLocationy"
+      (click)="locationClick()" [title]="hoverText" (click)="$event.stopPropagation()">
+      <div >
+        <span *ngIf="selectorDisabled && selectedLocations.length<1">
+          {{selectedLocationName}}
+        </span>
+        <span *ngIf="!selectorDisabled && selectedLocations.length<1">
+          Select
+        </span>
+
+        <kendo-chip *ngFor="let selectedLocation of selectedLocations.slice(0,3)"
+          [label]="selectedLocation.locationName" removable="true"  removeIcon="k-icon k-i-close"
+          (remove)="onRemove(selectedLocation);">
+        </kendo-chip>
+      </div>
+      <div class="d-flex flex-column align-items-center ml-1">
+        <em class="fas fa-chevron-down"></em>
+        <span *ngIf="selectedLocations?.length >3">+{{selectedLocations?.length-3}}
+        </span>
+      </div>
+    </div>
+    <div class="location-tree-wrapper p-2" *ngIf="selectorOpened" (click)="$event.stopPropagation()">
+      <location-multi-selector-tree-view [locations]="locationHierachy.locations"
+        [expandedKeys]="expandedKeys" 
+        [selectedLocationId]="selectedLocationId" [checkedKeys]="checkedKeys" (onChange)="handleChange($event)"
+        (closeEvent)="onItemSelected($event)">
+      </location-multi-selector-tree-view>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+@import "../../../assets/styles/variables";
+
+:host ::ng-deep .k-checkbox {
+  border-color: black;
+}
+:host ::ng-deep .k-textbox {
+  width: 100%;
+  margin-bottom: 8px;
+}
+:host ::ng-deep .k-in.k-state-focused {
+  box-shadow: none !important;
+}
+:host ::ng-deep .selectoritem:hover{
+  background-color: $cc-primary-color;
+  border-radius: 3px;
+  color: $white;
+  font-weight: 500;
+  cursor: default;
+}
+:host ::ng-deep .k-treeview {
+  .k-icon {
+    font-size: 20px;
+  }
+
+  .k-in {
+    padding: 0px;
+    width: 100%;
+  }
+}
+:host ::ng-deep .selectoritem{
+  padding:5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+:host ::ng-deep .disableNode {
+  opacity: 0.6;
+  pointer-events: none;
+}
+:host ::ng-deep .itemactive {
+  color: $cc-primary-color;
+  font-weight: 500;
+}

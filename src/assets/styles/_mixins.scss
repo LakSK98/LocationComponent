@@ -1,0 +1,134 @@
+@import "variables";
+
+@mixin caret-down {
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  border-top: 0.3em solid;
+}
+
+@mixin caret-up {
+  border-bottom: 0.3em solid;
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  border-top: 0;
+}
+
+@mixin heading-styles {
+  font-family: $font-family;
+  margin: 0;
+}
+
+@mixin box-sizing {
+  box-sizing: border-box;
+}
+
+@mixin default-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin default-card-shadow {
+  border: 0;
+  border-radius: 0;
+  box-shadow: -1px 3px 8px 0 rgba(0, 0, 0, 0.13);
+}
+
+@mixin angle-down {
+  @include caret-down;
+
+  display: block;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin angle-up {
+  @include caret-up;
+
+  display: block;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin btn-disabled {
+  background-color: $disabled-grey;
+  cursor: not-allowed;
+}
+
+@mixin btn-disabled-hover {
+  background-color: $disabled-grey;
+  color: $white;
+}
+
+@mixin cc-wrapper {
+  background: $white;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.21);
+}
+
+// Mixins for Media Queries
+// Extra small devices
+@mixin xs {
+  @media ( min-width: #{$screen-xs-min} ) and ( max-width: #{$screen-xs-max} ) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin media-sm {
+  @media ( min-width: #{$screen-sm-min} ) and ( max-width: #{$screen-sm-max} ) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin media-md {
+  @media ( min-width: #{$screen-md-min} ) and ( max-width: #{$screen-md-max} ) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin media-lg {
+  @media ( min-width: #{$screen-lg-min} ) and ( max-width: #{$screen-lg-max} ) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin media-xl {
+  @media ( min-width: #{$screen-xl-min} ) and ( max-width: #{$screen-xl-max} ) {
+    @content;
+  }
+}
+
+// Medium  large devices
+@mixin media-ml {
+  @media ( min-width: #{$screen-ml-min} ) and ( max-width: #{$screen-ml-max} ) {
+    @content;
+  }
+}
+
+// XXL devices
+@mixin media-xxl {
+  @media ( min-width: #{$screen-xxl-min} ) and ( max-width: #{$screen-xxl-max} ) {
+    @content;
+  }
+}
+
+// XXXL devices
+@mixin media-xxxl {
+  @media ( min-width: #{$screen-xxxl-min} ) and ( max-width: #{$screen-xxxl-max} ) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin media-custom($min, $max) {
+  @media (min-width: $min + "px") and (max-width: $max + "px") {
+    @content;
+  }
+}

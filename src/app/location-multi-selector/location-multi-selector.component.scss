@@ -1,0 +1,49 @@
+@import "../../assets/styles/variables";
+
+:host ::ng-deep .location-selector-form {
+  align-items: center;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  color: #495057;
+  cursor: pointer;
+  display: block;
+  font-size: 0.9rem;
+  height: auto;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.2rem 0.4rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 300px;
+}
+:host ::ng-deep .location-selector-focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 0.2rem rgb(0 81 81 / 10%);
+  color: #495057;
+  outline: 0;
+}
+:host ::ng-deep .location-tree-wrapper {
+  position: absolute;
+  z-index: 10;
+}
+
+:host ::ng-deep .disableSelector {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.k-chip {
+  color: #fff;
+  margin: 2px;
+  background-color: $cc-primary-color;
+  float: left;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  &:last-child{
+    max-width: 230px;
+  }
+}
